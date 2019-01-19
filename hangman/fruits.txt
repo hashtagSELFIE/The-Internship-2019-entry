@@ -1,0 +1,5 @@
+["ORANGE", "Fruit so good they name color from it"]
+["POMERGRANATE", "Its Named like a legend animal, Its Pulp like rubies"]
+["APPLE", "It keeps doctor away"]
+["MANGOSTEEN", "Purple outside, tasty inside"]
+["STARFRUIT", "Look up on the nigh sky"]
