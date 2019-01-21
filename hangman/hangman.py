@@ -9,15 +9,14 @@ import os
 from ast import literal_eval
 
 
-def mainmenu(menucount):
+def mainmenu(menucount, scoreboard, losecount, wincount, finalscore):
     """Main menu for navigating through option and gameplay."""
-    scoreboard = []
     while 1:
         if menucount != 0:
             print("Welcome back to Hangman The Game!\n")
         else:
             print("Welcome to the Hangman The Game!\n")
-        print("Enter 1 to PLAY\nEnter 2 to LEARN HOW TO PLAY\nEnter 3 to EXIT\n")
+        print("Enter 1 for THE GAME\nEnter 2 for TUTORIAL\nEnter 3 for RESULTS & EXIT\n")
         response = input()
         if response == "1":
             os.system('cls' if os.name == 'nt' else 'clear')
@@ -27,7 +26,7 @@ def mainmenu(menucount):
             tutorial()
         elif response == "3":
             os.system('cls' if os.name == 'nt' else 'clear')
-            endgame(scoreboard, 0, 0, 0)
+            endgame(scoreboard, losecount, wincount, finalscore)
             break
         else:
             os.system('cls' if os.name == 'nt' else 'clear')
@@ -40,20 +39,21 @@ def filepicker():
     while 1:
         print("Pick your category you interested in\n")
         print("Type in 1 for FRUITTY FRESHNESS")
-        print("Type in 2 for THRILLING TRANSPORTATION\nType in 3 for CONTINENTAL COUNTRIES\n")
+        print(
+            "Type in 2 for THRILLING TRANSPORTATION\nType in 3 for CONTINENTAL COUNTRIES\n")
         response = input()
         mystery = ""
         if response == "1":
             os.system('cls' if os.name == 'nt' else 'clear')
-            mystery = wordselector("fruits")
+            mystery = wordselector("fruits.txt")
             break
         elif response == "2":
             os.system('cls' if os.name == 'nt' else 'clear')
-            mystery = wordselector("transportaion")
+            mystery = wordselector("transportaion.txt")
             break
         elif response == "3":
             os.system('cls' if os.name == 'nt' else 'clear')
-            mystery = wordselector("countries")
+            mystery = wordselector("countries.txt")
             break
         else:
             os.system('cls' if os.name == 'nt' else 'clear')
@@ -65,10 +65,10 @@ def filepicker():
     outcome = thegame(mystery, 0, len(mystery[0]) // 2, [], [])
     return outcome
 
+
 def wordselector(category):
     """Return Word that will be used for that round"""
-    text_selx = category + ".txt"
-    realtext = open(text_selx, "r")
+    realtext = open(category, "r")
     wordbank = [i for i in realtext]
     return literal_eval(random.choice(wordbank))
 
@@ -81,7 +81,8 @@ def thegame(mystery, points, strike, guessed, wrongguessed):
         hitormiss = 0
         wrongguessed.sort()
         if strike == 0:
-            print("Uh oh! You have lost! The correct answer is\n\n" + mystery[0] + ".\n")
+            print("Uh oh! You have lost! The correct answer is\n\n" +
+                  mystery[0] + ".\n")
             print("Press ENTER to continue.\n")
             input("")
             break
@@ -89,8 +90,8 @@ def thegame(mystery, points, strike, guessed, wrongguessed):
             results = len(mystery[0]) * 100 + strike * 50
             print(*board, sep=' ')
             print()
-            print("Congratulations! You have won!\nYou have earned "+str(results)\
-+" points\nPress ENTER to continue.\n")
+            print("Congratulations! You have won!\nYou have earned " + str(results)
+                  + " points\nPress ENTER to continue.\n")
             input("")
             break
         print(*board, sep=' ')
@@ -115,7 +116,7 @@ now have 1 strike left.")
             continue
         for j in range(len(mystery[0])):
             if answer in mystery[0][j]:
-                hitormiss, points = hitormiss + 1, points+1
+                hitormiss, points = hitormiss + 1, points + 1
                 board[j] = answer
                 continue
         if hitormiss == 0:
@@ -127,6 +128,7 @@ now have 1 strike left.")
         guessed.append(answer)
     os.system('cls' if os.name == 'nt' else 'clear')
     return results
+
 
 def tutorial():
     """Print information of how to play the game"""
@@ -153,8 +155,8 @@ def endgame(scorelog, losecount, wincount, finalscore):
     if losecount > 0:
         print("You have lost %i times." % losecount if losecount > 1 else "You \
 have lost 1 time.", end=' ')
-    print("You have earned %i points, good job!" % finalscore if finalscore > 1 \
-else "You have not won any point :(")
+    print("You have earned %i points, good job!" % finalscore if finalscore > 1
+          else "You have not won any point :(")
     print()
     print("Enter 1 to exit the program.\nEnter 2 to return to the menu.\n")
     response = input()
@@ -162,5 +164,7 @@ else "You have not won any point :(")
         os.system('cls' if os.name == 'nt' else 'clear')
     elif response == "2":
         os.system('cls' if os.name == 'nt' else 'clear')
-        mainmenu(0)
-mainmenu(0)
+        mainmenu(0, [], losecount, wincount, finalscore)
+
+
+mainmenu(0, [], 0, 0, 0)
