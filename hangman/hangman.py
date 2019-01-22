@@ -105,6 +105,7 @@ now have 1 strike left.")
         print()
         answer = input().upper()
         print()
+        os.system('cls' if os.name == 'nt' else 'clear')
         if answer.isalpha() is False:
             print("Invalid input. Please enter another character.\n")
             continue
