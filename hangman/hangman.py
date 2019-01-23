@@ -20,7 +20,7 @@ def mainmenu(menucount, scoreboard, losecount, wincount, finalscore):
         response = input()
         if response == "1":
             os.system('cls' if os.name == 'nt' else 'clear')
-            scoreboard.append(filepicker())
+            scoreboard.append(filepicker(finalscore))
         elif response == "2":
             os.system('cls' if os.name == 'nt' else 'clear')
             tutorial()
@@ -34,13 +34,15 @@ def mainmenu(menucount, scoreboard, losecount, wincount, finalscore):
         menucount += 1
 
 
-def filepicker():
+def filepicker(finalscore):
     """Selects the file that will be used in the game"""
     while 1:
         print("Pick your category you interested in\n")
         print("Type in 1 for FRUITTY FRESHNESS")
         print(
             "Type in 2 for THRILLING TRANSPORTATION\nType in 3 for CONTINENTAL COUNTRIES\n")
+        if finalscore > 2499:
+            print("SECRET MODE UNLOCKED!\nType in SUDO for more.")
         response = input()
         mystery = ""
         if response == "1":
@@ -55,6 +57,19 @@ def filepicker():
             os.system('cls' if os.name == 'nt' else 'clear')
             mystery = wordselector("countries.txt")
             break
+        elif response == "SUDO" and finalscore > 2499:
+            os.system('cls' if os.name == 'nt' else 'clear')
+            print("You have now unlocked SUDO mode! You can now enter your own custom\
+ word libary. all you have to do is create an .txt file with the format below \n\n\
+ ["'x'", "'y'"]\n\nOnly replace the x for the mystery text and y for hint messages\n\
+ (DO NOT REMOVE DOUBLEQUOTES). And put them in the same directory as this file!\n\n\
+ Please enter your custom file below\n\nType in "'!EXIT'" if you want to leave\n")
+            filename = input()
+            if filename == "!EXIT" or filename == "'!EXIT'":
+                os.system('cls' if os.name == 'nt' else 'clear')
+            else:
+                mystery = wordselector(filename)
+                break
         else:
             os.system('cls' if os.name == 'nt' else 'clear')
             print("Invalid input, Please type again!")
