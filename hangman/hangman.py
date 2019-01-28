@@ -1,12 +1,13 @@
 """
 Hangman The Game
 Created by Chetsadaporn Traivinidsreesuk
+For The
 """
 
 
-import random
-import os
-from ast import literal_eval
+import random #For mystery word picker
+import os #For new page function compatibility bettween OSes
+from ast import literal_eval # For reading list as literal in the .txt files
 
 
 def mainmenu(menucount, scoreboard, losecount, wincount, finalscore):
@@ -63,9 +64,9 @@ def filepicker(finalscore):
  word libary. all you have to do is create an .txt file with the format below \n\n\
  ["'x'", "'y'"]\n\nOnly replace the x for the mystery text and y for hint messages\n\
  (DO NOT REMOVE DOUBLEQUOTES). And put them in the same directory as this file!\n\n\
- Please enter your custom file below\n\nType in "'!EXIT'" if you want to leave\n")
+ Please enter your custom file below\n\nType in '!EXIT' if you want to leave\n")
             filename = input()
-            if filename == "!EXIT" or filename == "'!EXIT'":
+            if filename in ("!EXIT", "'!EXIT'"):
                 os.system('cls' if os.name == 'nt' else 'clear')
             else:
                 mystery = wordselector(filename)

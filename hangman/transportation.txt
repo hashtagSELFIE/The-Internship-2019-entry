@@ -1,0 +1,3 @@
+["AIRPLANE", "Soaring in the sky, Fly in comfort"]
+["SUBWAY", "American counterpart of English 'Underground', Perfect for urban life"]
+["MOTORCYCLE", "There are many sizes, But they always have two wheel"]
