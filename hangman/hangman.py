@@ -5,9 +5,9 @@ For The
 """
 
 
-import random #For mystery word picker
-import os #For new page function compatibility bettween OSes
-from ast import literal_eval # For reading list as literal in the .txt files
+import random  # For mystery word picker
+import os  # For new page function compatibility bettween OSes
+from ast import literal_eval  # For reading list as literal in the .txt files
 
 
 def mainmenu(menucount, scoreboard, losecount, wincount, finalscore):
@@ -40,7 +40,8 @@ def filepicker():
     while 1:
         print("Pick your category you interested in\n")
         print("Type in 1 for FRUITTY FRESHNESS")
-        print("Type in 2 for THRILLING TRANSPORTATION\nType in 3 for CONTINENTAL COUNTRIES\n")
+        print("Type in 2 for THRILLING TRANSPORTATION\nType in 3 for CONTINENTAL\
+ COUNTRIES\n")
         response = input()
         mystery = ""
         if response == "1":
@@ -60,8 +61,8 @@ def filepicker():
             print("Invalid input, Please type again!")
             print()
     os.system('cls' if os.name == 'nt' else 'clear')
-    print("The game will now begin when you type in your character\n")
-    print("Here is your mystery word.")
+    print("The game will now begin when you type in your character\n\
+Type in ONE character at a time!\n\nHere is your mystery word.\n")
     outcome = thegame(mystery, 0, len(mystery[0]) // 2, [], [])
     return outcome
 
@@ -75,7 +76,7 @@ def wordselector(category):
 
 def thegame(mystery, points, strike, guessed, wrongguessed):
     "This function is where the game take place."
-    board = ["_" for _ in mystery[0]]
+    board = ["_" for letter in mystery[0] if letter.isalpha()]
     while 1:
         results = 0
         hitormiss = 0
@@ -133,7 +134,7 @@ now have 1 strike left.")
 
 def tutorial():
     """Print information of how to play the game"""
-    print("Guess the word! Choose a cagetory you interested in and the game will start!")
+    print("Guess the word! Choose a category you interested in and the game will start!")
     print("Guess the word one letter at a time. Strike is based on the length of the mystery word.")
     print("Wrong guess will result in strike! If you have enough strikes, the game will be over!\n")
     print("Type wisely.\n")
