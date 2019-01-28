@@ -1,0 +1,5 @@
+["THAILAND", "Land of smiles."]
+["BELGIUM", "Chocolate, Waffles. They are known for it."]
+["MOROCCO", "The capital known as Marrakech, The country is just under Gibraltar strait."]
+["ARGENTINA", "Known for Messi, Che Guevara, Tango and Iguazu Falls."]
+["AUSTRALIA", "AKA The Down under."]

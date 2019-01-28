@@ -1,3 +1,5 @@
-["AIRPLANE", "Soaring in the sky, Fly in comfort"]
-["SUBWAY", "American counterpart of English 'Underground', Perfect for urban life"]
-["MOTORCYCLE", "There are many sizes, But they always have two wheel"]
+["AEROPLANE", "Soaring in the sky, Fly in comfort."]
+["SUBWAY", "American counterpart of English 'Underground', Perfect for urban life."]
+["MOTORCYCLE", "There are many sizes, But they always have two wheel."]
+["AMBULANCE", "Loud siren, bright signals, Goes in time for the rescue."]
+["SUBMARINE", "Diving under the sea undetected."]
