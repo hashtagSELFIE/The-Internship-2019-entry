@@ -31,7 +31,7 @@ folder as this Python file directory!\n")
             os.system('cls' if os.name == 'nt' else 'clear')
             print("Please enter EXACT file name down below (Example: export.xml)\n")
             filename = input()
-            print("\nPress enter to confirm\nType in 'EDIT' to re-enter file name.\n")
+            print("\nPress ENTER to confirm\nType in 'EDIT' to re-enter file name.\n")
             answer = input()
             if answer in ("EDIT", "'EDIT'"):
                 continue

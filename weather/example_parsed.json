@@ -1,0 +1,27 @@
+{
+  "shiporder": {
+    "@orderid": "889923",
+    "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+    "@xsi:noNamespaceSchemaLocation": "shiporder.xsd",
+    "orderperson": "John Smith",
+    "shipto": {
+      "name": "Ola Nordmann",
+      "address": "Langgt 23",
+      "city": "4000 Stavanger",
+      "country": "Norway"
+    },
+    "item": [
+      {
+        "title": "Empire Burlesque",
+        "note": "Special Edition",
+        "quantity": "1",
+        "price": "10.90"
+      },
+      {
+        "title": "Hide your heart",
+        "quantity": "1",
+        "price": "9.90"
+      }
+    ]
+  }
+}
