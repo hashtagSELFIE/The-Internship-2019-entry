@@ -16,20 +16,27 @@ import xmltodict
 
 def newformat():
     """
+MAKE SURE TO INSTALL XMLTODICT LIBARY FIRST, you can do so by type the following in your terminal
+
+
+>> pip3 install xmltodict
+
+
 Read the 'weather.xml' file then convert it using xmltodict libary, then export it
 in to readable JSON file
     """
-    print("Welcome to XML to JSON parser.\n\nEnter for demo mode(Read the preset example file)\n\n\
-Enter 'SUDO' for your custom xml context file\nMake sure you put your custom file in THIS exact same\
-folder as this Python file directory!\n")
+    os.system('cls' if os.name == 'nt' else 'clear')
+    print("Welcome to XML to JSON parser.\n\nEnter for demo mode(Read the preset example file).\n\n\
+Enter 'SUDO' for your custom xml context file.\nMake sure you put your custom file in THIS exact same\
+ folder as this Python file directory!\n")
     filename = 'weather.xml'
     response = input()
     realfilename = ''
     os.system('cls' if os.name == 'nt' else 'clear')
-    if response in ("SUDO", "'SUDO'"):
+    if response in ("SUDO", "'SUDO'", "sudo", "'sudo'"):
         while 1:
             os.system('cls' if os.name == 'nt' else 'clear')
-            print("Please enter EXACT file name down below (Example: export.xml)\n")
+            print("Please enter EXACT file name down below (Example: export.xml).\n")
             filename = input()
             print("\nPress ENTER to confirm\nType in 'EDIT' to re-enter file name.\n")
             answer = input()
@@ -52,7 +59,7 @@ folder as this Python file directory!\n")
         else:
             json.dump(raw_json, export, indent=2)
     print("File created as", realfilename + '_parsed.json')
-    print("Export done!\n\nPress Enter to exit this program.")
+    print("Export done!\n\nPress Enter to exit this program.\n")
     input()
 
 
