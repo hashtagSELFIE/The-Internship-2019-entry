@@ -1,7 +1,7 @@
 """
 Hangman The Game
 Created by Chetsadaporn Traivinidsreesuk
-For The
+For The Internship 2019 Application
 """
 
 
