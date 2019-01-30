@@ -1,0 +1,2 @@
+https://stackoverflow.com/questions/2084508/clear-terminal-in-python
+https://stackoverflow.com/questions/306400/how-to-randomly-select-an-item-from-a-list
