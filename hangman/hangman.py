@@ -13,6 +13,7 @@ from ast import literal_eval  # For reading list as literal in the .txt files
 def mainmenu(menucount, scoreboard, losecount, wincount, finalscore):
     """Main menu for navigating through option and gameplay."""
     while 1:
+        os.system('cls' if os.name == 'nt' else 'clear')
         if menucount != 0:
             print("Welcome back to Hangman The Game!\n")
         else:
