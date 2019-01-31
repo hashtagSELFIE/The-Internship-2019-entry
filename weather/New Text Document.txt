@@ -1,4 +1,0 @@
-https://stackoverflow.com/questions/2084508/clear-terminal-in-python
-https://github.com/martinblech/xmltodict/issues/77
-https://stackabuse.com/reading-and-writing-json-to-a-file-in-python/
-https://medium.com/@MicroPyramid/how-to-convert-xml-content-into-json-using-xmltodict-3ab92bff913e

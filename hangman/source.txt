@@ -1,4 +1,0 @@
-https://stackoverflow.com/questions/2084508/clear-terminal-in-python
-https://stackoverflow.com/questions/306400/how-to-randomly-select-an-item-from-a-list
-https://stackoverflow.com/questions/17757450/how-to-print-a-list-with-integers-without-the-brackets-commas-and-no-quotes/17757544
-https://stackoverflow.com/questions/36209980/reading-a-list-stored-in-a-text-file?lq=1
