@@ -7,6 +7,9 @@ For The Internship 2019 Application
 Credits: MicroPyramid
 https://medium.com/@MicroPyramid/how-to-convert-xml-content-into-json-using-xmltodict-3ab92bff913e
 
+xmltodict package by xmltodict package by martinblech
+https://pypi.org/project/xmltodict/
+
 """
 
 
