@@ -30,10 +30,12 @@ in to readable JSON file
     print("Welcome to XML to JSON parser.\n\nEnter for demo mode(Read the preset example file).\n\n\
 Enter 'SUDO' for your custom xml context file.\nMake sure you put your custom file in THIS exact same\
  folder as this Python file directory!\n")
+    # default file to be parse in this program (also the example file in Bitbucket)
     filename = 'weather.xml'
     response = input()
     realfilename = ''
     os.system('cls' if os.name == 'nt' else 'clear')
+    # In case of user not understanding how to properly type in SUDO as of vague instruction.
     if response in ("SUDO", "'SUDO'", "sudo", "'sudo'"):
         while 1:
             os.system('cls' if os.name == 'nt' else 'clear')
@@ -47,15 +49,17 @@ Enter 'SUDO' for your custom xml context file.\nMake sure you put your custom fi
                 os.system('cls' if os.name == 'nt' else 'clear')
                 print("Custom file accepted!")
                 break
+    # previously did not work since open function need to be read as binaries
     with open(filename, 'rb') as xml_file:
         raw_json = json.loads(json.dumps(xmltodict.parse(xml_file)))
     print("Conversion done!")
-    for i in filename:
+    for i in filename:  # removes filename extension
         if i == ".":
             break
         realfilename += i
     with open(realfilename + '_parsed.json', 'w') as export:
         if realfilename == 'weather':
+            # To achieve same result as in Bitbucket example
             json.dump(raw_json["current"], export, indent=2)
         else:
             json.dump(raw_json, export, indent=2)
