@@ -1,7 +1,5 @@
 # The Internship 2019 Entry
 
-[![IMAGE ALT TEXT HERE](https://theinternship.io/_nuxt/img/82f9363.png)](https://theinternship.io/)
-
 Repository นี้ มีไว้เพื่อการศึกษา และไว้สมัครโครงการ The Internship 2019 เท่านั้น
 
 <br>
@@ -13,5 +11,13 @@ Repository นี้ มีไว้เพื่อการศึกษา แ�
 คุณสามารถเลือกโฟลเดอร์ด้านบน เพื่ออ่าน README ย่อย ของโปรแกรมทั้งสองได้เลยครับ
 
 <br>
+
+# Navigator
+
+[![Click for Hangman folder](https://raw.githubusercontent.com/hashtagSELFIE/The-Internship-2019-entry/master/images/hangman.png)](https://github.com/hashtagSELFIE/The-Internship-2019-entry/tree/master/hangman)
+
+[![Click for Weather folder](https://raw.githubusercontent.com/hashtagSELFIE/The-Internship-2019-entry/master/images/weather.png)](https://github.com/hashtagSELFIE/The-Internship-2019-entry/tree/master/weather)
+
+--------------------------------------------------------------------------------
 
 [![forthebadge](https://forthebadge.com/images/badges/made-with-python.svg)](https://forthebadge.com)
